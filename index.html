@@ -7,10 +7,25 @@
     <style>
         body { margin: 0; overflow: hidden; }
         canvas { display: block; background: #000; }
+        #startButton {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            font-size: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <canvas id="gameCanvas"></canvas>
+    <button id="startButton">Start Game</button>
+    <audio id="backgroundMusic" src="my-game-music.mp3" loop></audio>
     <script src="game.js"></script>
 </body>
 </html>
