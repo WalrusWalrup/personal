@@ -4,28 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Game</title>
-    <style>
-        body { margin: 0; overflow: hidden; }
-        canvas { display: block; background: #000; }
-        #startButton {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            padding: 20px;
-            font-size: 20px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the CSS file -->
 </head>
 <body>
-    <canvas id="gameCanvas"></canvas>
     <button id="startButton">Start Game</button>
     <audio id="backgroundMusic" src="my-game-music.mp3" loop></audio>
-    <script src="game.js"></script>
+
+    <div id="tabs">
+        <div id="farmTab" class="tab active">Farm</div>
+        <div id="beatTab" class="tab">Beat</div>
+        <div id="settingsTab" class="tab">Settings</div>
+    </div>
+
+    <div id="content"></div>
+
+    <script src="game.js"></script> <!-- Link to the JavaScript file -->
 </body>
 </html>
