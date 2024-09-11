@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+#startButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    font-size: 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#tabs {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+}
+
+.tab {
+    padding: 15px 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.tab.active {
+    background-color: green;
+}
+
+#content {
+    display: none; /* Initially hidden */
+    padding-top: 60px;
+    text-align: center;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    margin: 20px;
+    display: inline-block;
+}
+
+#beatSquare {
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    margin-top: 50px;
+    cursor: pointer;
+}
