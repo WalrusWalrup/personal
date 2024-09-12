@@ -1,1 +1,1 @@
-# https://walruswalrup.github.io/personal/  (Version Alpha V0.1.5)
+# https://walruswalrup.github.io/personal/  (Version Alpha V0.2)
