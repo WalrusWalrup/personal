@@ -1,7 +1,15 @@
-body {
+html, body {
     margin: 0;
-    overflow: hidden;
+    height: 100%;
+    padding: 0;
+}
+
+body {
     font-family: Arial, sans-serif;
+    background-size: cover; /* Cover the entire page */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    overflow: hidden;
 }
 
 #startButton {
@@ -19,18 +27,20 @@ body {
 }
 
 #tabs {
+    margin: 0px;
+    padding: 0px;
     display: none; /* Initially hidden */
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #333;
+    background-color: rgba(51, 51, 51); /* Slightly transparent background */
     display: flex;
     justify-content: center;
 }
 
 .tab {
-    padding: 15px 30px;
+    padding: 25px 30px;
     color: white;
     cursor: pointer;
 }
@@ -40,9 +50,76 @@ body {
 }
 
 #content {
+    margin: 0px;
+    padding: 0px;
     display: none; /* Initially hidden */
-    padding-top: 60px;
+    padding-top: 48px;
     text-align: center;
+    height: 100%;
+}
+
+
+#farmContent {
+    margin: 0;
+    padding: 0;
+    background-color: grey; /* Grey background for Farm tab */
+    height: 100%; /* Full height of the content area */
+}
+
+.squares-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow items to wrap if necessary */
+}
+
+.square-container {
+    display: flex;
+    flex-direction: column; /* Stack square and button vertically */
+    align-items: center; /* Center align items horizontally */
+    position: relative;
+    top: 50px;
+    margin: 10px; /* Space around each square-container */
+}
+
+.square {
+    width: 150px;
+    height: 150px;
+    background-color: green;
+    margin-bottom: 5px; /* Space between square and button */
+}
+
+.purchase-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: lightblue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px; /* Space between button and square */
+}
+
+.purchase-button:hover {
+    background-color: deepskyblue;
+}
+
+
+
+
+#beatContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgba(144, 238, 144, 0.6); /* Light green with slight transparency */
+    height: 100%; /* Full height of the content area */
+}
+
+#settingsContent {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgba(0, 0, 139, 0.8); /* Dark blue with slight transparency */
+    height: 100%; /* Full height of the content area */
 }
 
 .square {
@@ -57,6 +134,59 @@ body {
     width: 200px;
     height: 200px;
     background-color: green;
-    margin-top: 50px;
     cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+}
+
+#beatSquare:hover {
+    transform: scale(1.1);
+    background-color: limegreen;
+    box-shadow: 0 0 20px limegreen;
+}
+
+@keyframes particleBurst {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: limegreen;
+    border-radius: 50%;
+    animation: particleBurst 0.5s ease-out;
+    pointer-events: none;
+}
+
+#moneyDisplay {
+    font-size: 36px; /* Increase the font size */
+    margin-bottom: 50px; /* Increase the margin to push it higher up */
+    font-weight: bold; /* Make the text bold */
+}
+
+.purchase-effect {
+    animation: quickBounce 0.3s ease-in-out;
+}
+
+@keyframes quickBounce {
+    0% {
+        transform: scale(1);
+        background-color: limegreen;
+    }
+    50% {
+        transform: scale(1.1);
+        background-color: yellowgreen;
+    }
+    100% {
+        transform: scale(1);
+        background-color: limegreen;
+    }
 }
